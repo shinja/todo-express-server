@@ -11,6 +11,7 @@
     "eslint:fix": "node_modules/eslint/bin/eslint.js --fix src/**/*.js"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^7.2.0",
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
@@ -23,6 +24,7 @@
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
     "morgan": "^1.8.1"
   }
 }

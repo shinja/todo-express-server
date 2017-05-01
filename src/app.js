@@ -4,8 +4,8 @@ import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
+import auth from './routes/auth';
 import todos from './routes/todo';
-
 
 const app = express();
 
@@ -15,8 +15,10 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, '../src/public')));
 
+app.use('/auth', auth);
 app.use('/todos', todos);
 
 module.exports = app;
